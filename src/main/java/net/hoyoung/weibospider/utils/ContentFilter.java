@@ -18,7 +18,8 @@ public class ContentFilter {
             /*if(m.find()){
                 return m.group(0);
             }*/
-            return sb.toString();
+            return sb.toString().replaceAll("，", ",").replaceAll("^,","").replaceAll("？","?")
+                    .replaceAll("；",";");
         }
         return "";
     }

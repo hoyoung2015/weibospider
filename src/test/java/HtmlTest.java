@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by Administrator on 2015/11/30.
@@ -19,5 +21,12 @@ public class HtmlTest {
             e.printStackTrace();
         }
 
+    }
+    @Test
+    public void test2(){
+        long time = 1448858665000l;
+        new Date(time);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-M-d HH:m:s");
+        System.out.println(sdf.format(new Date(time)));
     }
 }

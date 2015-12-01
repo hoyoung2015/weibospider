@@ -74,6 +74,8 @@ public class TopicMetaSpider extends BaseSpider{
 
         @Override
         public void process(Page page) {
+//            System.err.println(page.getHtml().get());
+//            System.exit(0);
             TopicMetaSpider.this.topicPageInfo = new TopicPageInfo(page.getHtml().regex("CONFIG\\['page_id'\\]='([0-9a-z]+)';",1).get(),page.getHtml().regex("CONFIG\\['oid'\\]='([0-9a-z]+)';",1).get());
         }
         @Override

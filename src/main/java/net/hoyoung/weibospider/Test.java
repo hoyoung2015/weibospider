@@ -16,7 +16,8 @@ public class Test {
 
         String cookieStr = FileUtil.readAsString(new File("weibo_cookie.txt"));
 
-        TopicMetaSpider topicMetaSpider = new TopicMetaSpider("");
+//        TopicMetaSpider topicMetaSpider = new TopicMetaSpider("夏洛特烦恼");
+        TopicMetaSpider topicMetaSpider = new TopicMetaSpider("红米note3");
         topicMetaSpider.setCookieStr(cookieStr);
         TopicPageInfo topicPageInfo = topicMetaSpider.getTopicPageInfo();
         System.out.println(topicPageInfo);

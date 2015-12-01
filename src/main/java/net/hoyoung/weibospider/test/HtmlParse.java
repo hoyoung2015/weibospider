@@ -9,6 +9,7 @@ import us.codecraft.webmagic.selector.Selectable;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by hoyoung on 2015/11/30.
@@ -26,7 +27,9 @@ public class HtmlParse {
                 docInfo.setContent(ContentFilter.filter(content));
                 docInfo.setUserHome(sele.xpath("//a[@class='W_face_radius']/@href").get());
                 docInfo.setMid(sele.xpath("/div/@mid").get());
+                String tmp = sele.xpath("//div[@class='WB_from S_txt2']/a[@class='S_txt2']/@date").get();
 
+                docInfo.setPubTime(new Date(Long.valueOf(tmp)));
                 System.out.println(docInfo);
             }
 
